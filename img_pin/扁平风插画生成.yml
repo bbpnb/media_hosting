@@ -1,0 +1,77 @@
+app:
+  description: ''
+  icon: "\U0001F916"
+  icon_background: '#FFEAD5'
+  mode: agent-chat
+  name: "\u6241\u5E73\u98CE\u63D2\u753B\u751F\u6210"
+model_config:
+  agent_mode:
+    enabled: true
+    max_iteration: 2
+    strategy: function_call
+    tools:
+    - enabled: true
+      isDeleted: false
+      notAuthor: false
+      provider_id: dalle
+      provider_name: dalle
+      provider_type: builtin
+      tool_label: DALL-E 3
+      tool_name: dalle3
+      tool_parameters:
+        n: '1'
+        prompt: ''
+        quality: standard
+        size: horizontal
+        style: vivid
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets: []
+      strategy: router
+    retrieval_model: single
+  dataset_query_variable: null
+  external_data_tools: []
+  file_upload:
+    image:
+      enabled: false
+  model:
+    completion_params:
+      frequency_penalty: 0
+      max_tokens: 4096
+      presence_penalty: 0
+      stop: []
+      temperature: 0
+      top_p: 1
+    mode: chat
+    name: gpt-3.5-turbo-1106
+    provider: openai
+  more_like_this:
+    enabled: false
+  opening_statement: "\u8F93\u5165\u76F8\u5173\u5143\u7D20\u6216\u8005\u6587\u7AE0\
+    \u5185\u5BB9\uFF0C\u4E3A\u4F60\u751F\u6210\u6241\u5E73\u63D2\u753B\u98CE\u683C\
+    \u7684\u5C01\u9762\u56FE\u7247"
+  pre_prompt: "# Job Description: \u6241\u5E73\u98CE\u63D2\u753B\u751F\u6210\u5927\
+    \u5E08\n## Character\n\u8F93\u5165\u6587\u7AE0\u6807\u9898\uFF0C\u4E3A\u4F60\u751F\
+    \u6210\u6241\u5E73\u63D2\u753B\u98CE\u683C\u7684\u5C01\u9762\u56FE\u7247\n\n##\
+    \ Workflow\n\u8C03\u7528 dalle3 \u751F\u6210\u6587\u7AE0\u5C01\u9762\n## Constraints\n\
+    - \u5728dalle3\u7684\u63D0\u793A\u8BCD\u4E2D\u4F7F\u7528\u4EE5\u4E0B\u5173\u952E\
+    \u8BCD\uFF1Aflat illustration "
+  prompt_type: simple
+  retriever_resource:
+    enabled: false
+  sensitive_word_avoidance:
+    enabled: false
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
